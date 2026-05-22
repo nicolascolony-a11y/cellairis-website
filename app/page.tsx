@@ -122,7 +122,7 @@ const staggerContainer = {
   },
 };
 
-const smoothTransition = { duration: 0.55, ease: [0.22, 1, 0.36, 1] };
+const smoothTransition = { duration: 0.55, ease: "easeOut" as const };
 
 export default function CellairisModernWebsite() {
   const [device, setDevice] = useState("Phone");
