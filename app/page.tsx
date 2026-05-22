@@ -289,8 +289,8 @@ export default function CellairisModernWebsite() {
             [Zap, "Same-Day Repairs", "Most common phone repairs can be completed quickly while you shop."],
             [ShieldCheck, "Quality Parts", "Clean installs, careful testing, and reliable parts for daily use."],
             [Phone, "All Major Devices", "Apple, Samsung, tablets, laptops, consoles, smart watches, and more."],
-          ].map(([SIcon, title, text]) => (
-            <motion.div key={title} variants={fadeUp} transition={smoothTransition} whileHover={{ y: -6, scale: 1.02 }}>
+          ].map(([SIcon, title, text], index) => (
+  <motion.div key={index}  variants={fadeUp} transition={smoothTransition} whileHover={{ y: -6, scale: 1.02 }}>
             <Card className="rounded-3xl border-white/10 bg-white/5">
               <CardContent className="p-7">
                 <SIcon className="mb-5 h-8 w-8 text-red-400" />
