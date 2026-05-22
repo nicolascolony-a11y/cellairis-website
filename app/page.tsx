@@ -8,7 +8,11 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const defaultCalendlyUrl = ""; // Add a real Calendly link later if you want one fallback booking page
 
-const deviceData = {
+const deviceData: Record<string, {
+  icon: React.ElementType;
+  brands: string[];
+  repairs: string[];
+}> = {
   Phone: {
     icon: Smartphone,
     brands: ["iPhone", "Samsung", "Google Pixel", "Motorola", "OnePlus", "Other"],
@@ -139,7 +143,7 @@ export default function CellairisModernWebsite() {
     return current.repairs.filter((item) => item.toLowerCase().includes(search.toLowerCase()));
   }, [current.repairs, search]);
 
-  const handleDeviceChange = (name) => {
+  const handleDeviceChange = (name: string) => {
     setDevice(name);
     setBrand(deviceData[name].brands[0]);
     setRepair(deviceData[name].repairs[0]);
