@@ -153,7 +153,7 @@ export default function CellairisModernWebsite() {
 
   const openBooking = () => setShowBookingModal(true);
 
-  const bookAtLocation = (index) => {
+  const bookAtLocation = (index: number) => {
     const chosenLocation = locations[index];
     setSelectedLocation(index);
 
